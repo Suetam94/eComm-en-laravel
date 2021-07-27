@@ -4,6 +4,7 @@ namespace App\Http;
 
 use App\Http\Middleware\UserAuth;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Torann\Currency\Middleware\CurrencyMiddleware;
 
 class Kernel extends HttpKernel
 {
@@ -23,7 +24,8 @@ class Kernel extends HttpKernel
         \Illuminate\Session\Middleware\StartSession::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        UserAuth::class
+        UserAuth::class,
+        CurrencyMiddleware::class,
     ];
 
     /**

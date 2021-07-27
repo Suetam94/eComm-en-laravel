@@ -1,5 +1,8 @@
 <?php
 
+use Torann\Currency\CurrencyServiceProvider;
+use Torann\Currency\Facades\Currency;
+
 return [
 
     /*
@@ -175,6 +178,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        CurrencyServiceProvider::class,
+
     ],
 
     /*
@@ -228,6 +233,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Currency' => Currency::class,
 
     ],
 
