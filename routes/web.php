@@ -24,12 +24,14 @@ Route::get('/logout', function () {
     Session::forget('user');
     return redirect('/login');
 });
+Route::view('/register', 'register');
 
 Route::get('/confirmed_order', function () {
     return view('order-confirmed');
 });
 
 Route::post('/login', [UserController::class, 'login']);
+Route::post('/register', [UserController::class, 'register']);
 
 Route::get('/', [ProductController::class, 'index']);
 Route::get('/detail/{id}', [ProductController::class, 'detail']);
