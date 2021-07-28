@@ -69,8 +69,8 @@
 
     .panel {
         position: absolute;
-        bottom: 0;
         width: 100%;
+        margin-top: 100vh;
     }
 
     .detail-image {
@@ -94,6 +94,43 @@
 
     .searched-image {
         height: 200px;
+    }
+
+    .cart-image {
+        height: 250px;
+    }
+
+    .cart-item, .cart-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cart-item {
+        margin-bottom: 15px;
+    }
+
+    .cart-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cart-wrapper h2 {
+        margin-bottom: 30px;
+    }
+
+    tfoot {
+        border-top: 2px solid black;
+        font-weight: bold;
+    }
+
+    a {
+        text-decoration: unset;
+        color: inherit;
+    }
+
+    a:hover {
+        text-decoration: none;
     }
 </style>
 </html>
